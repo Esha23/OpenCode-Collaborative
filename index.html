@@ -76,7 +76,7 @@
     h1#center-project{margin-left: 5vh;}
     h1#center-game{margin-left: 5vh;}
     }
-	.preloader img{
+  .preloader img{
 
   height:230px;
   width:auto;
@@ -84,18 +84,18 @@
   display: inline-block;
 }
 .preloader img {
-		-webkit-animation: rotation 2s 1 linear;
+    -webkit-animation: rotation 2s 1 linear;
 }
 
 @-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotateY(0deg)  scale(0,0);
+    from {
+        -webkit-transform: rotateY(0deg)  scale(0,0);
 
-		}
-		to {
-				-webkit-transform: rotateY(360deg) scale(1.7,1.7);
+    }
+    to {
+        -webkit-transform: rotateY(360deg) scale(1.7,1.7);
 
-		}
+    }
 }
   </style>
 
@@ -293,16 +293,16 @@ max-height: 340px;
     <ul class="sticky">
         <li>
             <img src="images/fb.jpeg" width="70" height="150">
-			<p><br><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fopencodeiiita%2F&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" padding-left="10px" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></p>
+      <p><br><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fopencodeiiita%2F&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" padding-left="10px" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></p>
         </li>
     </ul>
 </div>
 
 <div id="clockdiv">
-	<div><span class="days"></span><div class="smalltext">Days</div></div>
-	<div><span class="hours"></span><div class="smalltext">Hours</div></div>
-	<div><span class="minutes"></span><div class="smalltext">Minutes</div></div>
-	<div><span class="seconds"></span><div class="smalltext">Seconds</div></div>
+  <div><span class="days"></span><div class="smalltext">Days</div></div>
+  <div><span class="hours"></span><div class="smalltext">Hours</div></div>
+  <div><span class="minutes"></span><div class="smalltext">Minutes</div></div>
+  <div><span class="seconds"></span><div class="smalltext">Seconds</div></div>
 </div>
 
 
@@ -498,7 +498,45 @@ max-height: 340px;
     </div>
   </section>
 
+<section id="fun" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="game" id="game">
+          <div class="heading">
+            <h1 id="center-game">Participant's Games</h1>
+          </div>
+          <div class="card" v-for="scores in alphaSort(scores)" onclick="this.classList.toggle('flipped')">
+            <div class="front">
 
+                <!-- <div class="image">
+                    <img v-bind:src="game.imageurl">
+                  </div> -->
+                <div class="name">
+                    <div class="triangle-left"></div>
+                    <div class="triangle-right"></div>
+                    {{ scores.name }}</div>
+                </div>
+                <div class="back">
+                    <!-- <div id="snow"></div> -->
+                    <div class="about">
+                        <div id="snow"></div>
+                        <p class="scores-name">CREATED BY</p>
+                        <p class="scores-Total">{{ scores.Total}}</p>
+                      </div>
+                    <div class="social">
+                      <div class="triangle-left"></div>
+                      <div class="triangle-right"></div>
+                      <a v-bind:href="game.github" target="_blank">
+                        <i class="fa fa-cubes" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -520,7 +558,7 @@ max-height: 340px;
           <div class="project-issues-list container" role="tab">
             <div class="row" id="opencode18-OpenCode-Collaborative-issues">
             </div>
-	    <br>
+      <br>
             <div class="row" id="opencode18-OpenCode-Collaborative-load-more">
 
                 <button class="btn btn-danger" onclick="loadMoreIssues('opencode18', 'OpenCode-Collaborative')">Load more</button>
@@ -1129,23 +1167,23 @@ max-height: 340px;
       <!-- <h3>Contact Info</h3> -->
 
       <!-- <li class="fh5co-contact-address ">
-									<i class="icon-home"></i>
-									5555 Love Paradise 56 New Clity 5655, <br>Excel Tower United Kingdom
-								</li> -->
+                  <i class="icon-home"></i>
+                  5555 Love Paradise 56 New Clity 5655, <br>Excel Tower United Kingdom
+                </li> -->
 
       <!-- <div class="row">
-							<div class="col-md-4">
-									<h4 class="contact_head">Faheem Zunjani</h4>
-										<i class="icon-envelope contact_icon"></i><span>iit2015113@iiita.ac.in</span>
-									</div>
-									<div class="col-md-4">
-								<i class="icon-globe contact_icon"></i> <a href="http://fossiiita.github.io" target="_blank">fossiiita.github.io</a>
-							</div>
-									<div class="col-md-4">
-									<h4 class="contact_head">Mubaris NK</h4>
-									<i class="icon-envelope contact_icon"></i><span>iit2015134@iita.ac.in</span>
-								</div>
-						</div> -->
+              <div class="col-md-4">
+                  <h4 class="contact_head">Faheem Zunjani</h4>
+                    <i class="icon-envelope contact_icon"></i><span>iit2015113@iiita.ac.in</span>
+                  </div>
+                  <div class="col-md-4">
+                <i class="icon-globe contact_icon"></i> <a href="http://fossiiita.github.io" target="_blank">fossiiita.github.io</a>
+              </div>
+                  <div class="col-md-4">
+                  <h4 class="contact_head">Mubaris NK</h4>
+                  <i class="icon-envelope contact_icon"></i><span>iit2015134@iita.ac.in</span>
+                </div>
+            </div> -->
 
       <!-- </div> -->
       <!-- </div> -->
@@ -1336,5 +1374,6 @@ var windowScroll = function() {
 
 
 <script src="js/game.js"></script>
+<script src="js/scores.js"></script>
 </body>
 </html>
